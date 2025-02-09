@@ -13,7 +13,7 @@ const app = express();
 
 // ✅ Fix: Configure CORS correctly
 app.use(cors({
-  origin: ['https://event-git-main-shrreyashs-projects.vercel.app', 'http://localhost:3000'],
+  origin: ['https://event-jade-nine.vercel.app', 'http://localhost:3000'],
   credentials: true, // Allow cookies, authentication headers
 }));
 
