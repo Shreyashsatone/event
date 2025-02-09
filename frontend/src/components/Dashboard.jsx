@@ -10,13 +10,6 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check if user is authenticated
-    const token = localStorage.getItem('authToken');
-    if (!token) {
-      navigate('/login'); // Redirect to login if no token
-      return;
-    }
-
     const fetchEvents = async () => {
       try {
         setLoading(true);
@@ -34,7 +27,7 @@ const Dashboard = () => {
     };
 
     fetchEvents();
-  }, [navigate]);
+  }, []);
 
   const handleLogout = () => {
     localStorage.removeItem('authToken'); // Clear token
@@ -45,7 +38,7 @@ const Dashboard = () => {
     <Container
       sx={{
         mt: 4,
-        backgroundImage: 'linear-gradient(to right,rgb(201, 109, 250), #FFFFFF)',
+        backgroundImage: 'linear-gradient(to right,rgb(201, 109, 250), #FFFFFF)', // Soft blue-white gradient
         borderRadius: 2,
         p: 3,
       }}
@@ -65,19 +58,19 @@ const Dashboard = () => {
           📅 Upcoming Events
         </Typography>
         <Box>
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "#3498DB",
-              color: "white",
-              "&:hover": { backgroundColor: "#2980B9" },
-              fontSize: { xs: '12px', sm: '14px' },
-              zIndex: 10, 
-            }}
-            onClick={() => navigate('/create-event')}
-          >
-            + Add Event
-          </Button>
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: "#3498DB",
+            color: "white",
+            "&:hover": { backgroundColor: "#2980B9" },
+            fontSize: { xs: '12px', sm: '14px' },
+            zIndex: 10, // Ensure buttons are above the overlay
+          }}
+          onClick={() => navigate('/create-event')}
+        >
+          + Add Event
+        </Button>
 
           <Button
             variant="outlined"
@@ -120,7 +113,7 @@ const Dashboard = () => {
               <Grid item xs={12} sm={6} md={4} key={event._id}>
                 <Card
                   sx={{
-                    backgroundImage: 'linear-gradient(to bottom right, #EAF2F8, #D5DBDB)',
+                    backgroundImage: 'linear-gradient(to bottom right, #EAF2F8, #D5DBDB)', // Subtle gray-blue gradient
                     boxShadow: 3,
                     transition: "0.3s",
                     "&:hover": { transform: "scale(1.03)", boxShadow: "5px 5px 15px rgba(0,0,0,0.2)" },
