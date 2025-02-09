@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://event-czm8.onrender.com/api',
   withCredentials: true,  // Ensures cookies are sent
   headers: {
     'Content-Type': 'application/json'
