@@ -1,5 +1,5 @@
 import { io } from 'socket.io-client';
 
-const socket = io('http://localhost:5000'); // Backend URL
+const socket = io('https://event-czm8.onrender.com'); // Backend URL
 
 export default socket;
