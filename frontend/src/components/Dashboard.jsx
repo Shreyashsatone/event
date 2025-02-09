@@ -14,7 +14,7 @@ const Login = () => {
     setError('');
     try {
       await api.post('/auth/login', { email, password });
-      navigate('/');
+      navigate('/Eventpage');
     } catch (err) {
       setError('Invalid email or password');
     }
