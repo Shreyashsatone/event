@@ -11,9 +11,9 @@ function App() {
     <Router>
       <Routes>
         {/* Redirect "/" to "/login" */}
-        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/login" element={<Navigate to="/login" />} />
         
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
         {/* Protected Routes (Only for Logged-in Users) */}
