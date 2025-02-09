@@ -5,7 +5,6 @@ import Dashboard from './components/Dashboard';
 import CreateEvent from './components/CreateEvent';
 import ProtectedRoute from './components/ProtectedRoute';
 import EditEvent from './components/EditEvent';
-import Eventpage from './components/Eventpage';
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/Eventpage" element={<Eventpage />} />
         <Route path="/register" element={<Register />} />
 
         {/* Only logged-in users can access these routes */}
