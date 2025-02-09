@@ -15,6 +15,8 @@ const app = express();
 app.use(cors({
   origin: ['https://event-jade-nine.vercel.app', 'http://localhost:3000'],
   credentials: true, // Allow cookies, authentication headers
+  methods: 'GET,POST,PUT,DELETE', // Allow these HTTP methods
+  allowedHeaders: 'Content-Type,Authorization', // Allow these headers
 }));
 
 app.use(express.json());
