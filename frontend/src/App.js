@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Routes>
         {/* Redirect "/" to "/login" */}
-        <Route path="/login" element={<Navigate to="/login" />} />
+        <Route path="/login" element={<Navigate to="/Dashboard" />} />
         
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
