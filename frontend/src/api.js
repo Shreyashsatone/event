@@ -1,14 +1,13 @@
-import axios from 'axios';
-
 // src/api.js
 import axios from 'axios';
 
 const api = axios.create({
   baseURL: 'https://event-czm8.onrender.com/api',
+  withCredentials: true,  // Ensures cookies are sent
+  headers: {
+    'Content-Type': 'application/json',
+  },
 });
-
-// export default api;
-
 
 // Attach JWT token to every request
 api.interceptors.request.use((config) => {
