@@ -10,6 +10,7 @@ connectDB();
 
 const app = express();
 
+
 // ✅ Fix: Configure CORS correctly
 app.use(cors({
   origin: 'https://event-jade-nine.vercel.app', // Allow only frontend requests
